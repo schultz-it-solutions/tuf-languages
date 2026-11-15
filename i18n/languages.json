@@ -1,0 +1,58 @@
+{
+    "versions": {
+        "v0": {
+            "product": "TUF_ED",
+            "slug": "tuf_ed",
+            "component": "TUF_ED 0.x (com_tuf_ed, plg_system_tufed, lib_com_tuf, pkg_tuf_ed)",
+            "packageVersion": "0.1.0.1",
+            "reviewRequired": [],
+            "languages": []
+        }
+    },
+    "names": {
+        "ca-ES": {
+            "english": "Catalan",
+            "native": "Català"
+        },
+        "da-DK": {
+            "english": "Danish",
+            "native": "Dansk"
+        },
+        "de-DE": {
+            "english": "German",
+            "native": "Deutsch"
+        },
+        "es-ES": {
+            "english": "Spanish",
+            "native": "Español"
+        },
+        "et-EE": {
+            "english": "Estonian",
+            "native": "Eesti"
+        },
+        "eu-ES": {
+            "english": "Basque",
+            "native": "Euskara"
+        },
+        "fr-FR": {
+            "english": "French",
+            "native": "Français"
+        },
+        "hu-HU": {
+            "english": "Hungarian",
+            "native": "Magyar"
+        },
+        "it-IT": {
+            "english": "Italian",
+            "native": "Italiano"
+        },
+        "nl-NL": {
+            "english": "Dutch",
+            "native": "Nederlands"
+        },
+        "sv-SE": {
+            "english": "Swedish",
+            "native": "Svenska"
+        }
+    }
+}

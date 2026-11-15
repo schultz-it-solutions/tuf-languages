@@ -1,0 +1,29 @@
+name: Validate translations
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: PHP version
+        run: php -v
+      - name: Validate language files
+        run: php tools/validate.php
+      - name: Translation status
+        run: |
+          for v in $(php -r 'echo implode(" ", array_keys(json_decode(file_get_contents("i18n/languages.json"), true)["versions"]));'); do
+            if [ -d "$v/source/en-GB" ]; then
+              echo "== $v"
+              php tools/diff.php --version="$v" --summary
+            else
+              echo "== $v: no English source yet"
+            fi
+          done
