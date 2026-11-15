@@ -68,9 +68,7 @@ Work in batches; do not load an entire language at once. Keep `work/` out of com
    are carried over automatically (this preserves work when keys are renamed or moved).
 3. `php tools/diff.php --version=<version> --summary` shows what is left; continue with
    workflow A per language.
-4. Bump `packageVersion` for that version in `i18n/languages.json` (component version
-   plus a fourth digit for language-only releases, e.g. `0.2.0.1`).
-5. If the release adds security warnings or statements, add their key patterns to
+4. If the release adds security warnings or statements, add their key patterns to
    `reviewRequired` of the version in `i18n/languages.json`.
 
 ## C. Add a language
@@ -89,6 +87,11 @@ Then add any term decisions from their review to the glossary.
 
 ## Build packages
 
-`php tools/build.php --version=v0` → `dist/v0/` with one installable zip per language
-plus `pkg_tuf_ed_languages-<version>.zip`. Review-required strings that are not reviewed
-yet are written in English into the packages.
+`php tools/build.php --version=v0` → `dist/v0/embed/` with `language/<tag>/*.ini` for
+all languages and `languages.xml`, the `<languages>` block for `pkg_tuf_ed.xml`. The
+maintainer copies `language/` next to `pkg_tuf_ed.xml` in the TUF_ED build and replaces
+the manifest's `<languages>` block. Joomla installs only languages the site already has.
+Review-required strings that are not reviewed yet are written in English.
+
+`--format=packs` builds separate installable language packs instead (not used at the
+moment).

@@ -2,14 +2,13 @@
 
 Translations for [TUF_ED](https://it-solutions.schultz.ch) – *Secure updates for Joomla
 extensions*. TUF_ED lets Joomla extension developers sign their updates with
-[The Update Framework](https://theupdateframework.io). The language packs are released
-separately from the extension and installed through Joomla's extension installer.
+[The Update Framework](https://theupdateframework.io). All translations are shipped inside
+the TUF_ED package; on installation Joomla adds only the languages the site has installed.
 
 ## Status
 
 Each language is a mix of translations by volunteers (**reviewed**) and translations made
-by an AI agent that no native speaker has checked yet (**machine**). The installer
-description of every language pack states the current percentages. Run
+by an AI agent that no native speaker has checked yet (**machine**). Run
 `php tools/diff.php --version=v0 --summary` for the full table.
 
 TUF_ED is security software, so a few strings (security warnings, the key-management
@@ -70,7 +69,7 @@ php tools/diff.php     --version=v0 --summary                     # status table
 php tools/validate.php                                            # checks (also run by CI)
 php tools/sync.php     --version=v0                               # after updating source/en-GB
 php tools/review.php   --version=v0 --lang=de-DE --base=<ref>     # record a volunteer review
-php tools/build.php    --version=v0                               # build packages into dist/
+php tools/build.php    --version=v0                               # files for pkg_tuf_ed into dist/v0/embed/
 ```
 
 Translation work by the agent follows

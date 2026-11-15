@@ -1,14 +1,16 @@
 # tuf-languages
 
 Translations of TUF_ED (com_tuf_ed with plg_system_tufed, lib_com_tuf and pkg_tuf_ed),
-released as separate language packages. Later also TUF_IN.
+shipped inside pkg_tuf_ed (`tools/build.php` produces a `language/` folder and the
+`<languages>` block for the package manifest). Later also TUF_IN.
 
 - `v0/`: one folder per version line (`v0` covers all 0.x releases). `source/en-GB/` is
   the English master copied from the extensions; `translations/<tag>/` mirror it.
 - All language files live in `admin/` (component, plugin, library and package files
   are all installed in the administrator language folder). `site/` only if the
   component gets frontend strings.
-- `i18n/languages.json`: per version the product, package slug, package version,
+- `i18n/languages.json`: per version the product, package slug, package version (only
+  used by `build.php --format=packs`),
   languages and `reviewRequired` key patterns (security strings shipped in English
   until reviewed by a native speaker).
 - `i18n/state/<version>.json`: per string the hash of the English text it was
