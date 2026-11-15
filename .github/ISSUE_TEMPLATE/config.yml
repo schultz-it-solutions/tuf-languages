@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: TUF_ED support and documentation
+    url: https://it-solutions.schultz.ch
+    about: Questions about TUF_ED itself, not about translations
