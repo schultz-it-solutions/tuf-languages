@@ -17,7 +17,9 @@ shipped inside pkg_tuf_ed (`tools/build.php` produces a `language/` folder and t
   translated from and its status (`reviewed`, `machine`, `needs-fix`).
 - `i18n/glossary/`: `_shared.md` for all languages, `_template.md` for new languages,
   plus one file per language.
-- `tools/`: plain PHP 8.1+ CLI scripts, no dependencies.
+- `tools/`: plain PHP 8.1+ CLI scripts, no dependencies. `source-import.php` copies the
+  maintainer's local en-GB files in, `build.php --into` copies the translations into the
+  package source; `tools/windows/*.bat` wrap both for the maintainer's Windows build.
 
 For any translation work use the `translate-tuf` skill
 (`.claude/skills/translate-tuf/SKILL.md`). Never hand-edit `.ini` files under

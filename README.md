@@ -70,7 +70,13 @@ php tools/validate.php                                            # checks (also
 php tools/sync.php     --version=v0                               # after updating source/en-GB
 php tools/review.php   --version=v0 --lang=de-DE --base=<ref>     # record a volunteer review
 php tools/build.php    --version=v0                               # files for pkg_tuf_ed into dist/v0/embed/
+php tools/source-import.php --version=v0 --root=<TUF_ED sources>     # copy local en-GB files into the repository
+php tools/build.php    --version=v0 --exclude=de-DE --into=<package folder>  # copy translations into the package source
 ```
+
+On Windows, `tools/windows/lang-upload.bat` and `tools/windows/lang-download.bat` wrap these
+two steps for a build process (configured with environment variables, see the comments
+at the top of each file).
 
 Translation work by the agent follows
 [`.claude/skills/translate-tuf/SKILL.md`](.claude/skills/translate-tuf/SKILL.md).

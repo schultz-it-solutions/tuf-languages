@@ -57,7 +57,10 @@ Work in batches; do not load an entire language at once. Keep `work/` out of com
 
 ## B. New English source from a component release
 
-1. Copy the `en-GB` files of all TUF_ED extensions into `<version>/source/en-GB/admin/`
+1. Usually the maintainer uploads them with `tools/windows/lang-upload.bat`
+   (`tools/source-import.php`), which arrives as a pull request "English source update";
+   then only steps 3 and 4 remain. Otherwise copy the `en-GB` files of all TUF_ED
+   extensions into `<version>/source/en-GB/admin/`
    (plugin, library and package language files are installed in the administrator
    language folder too), using unprefixed names: `com_tuf_ed.ini`, `com_tuf_ed.sys.ini`,
    `plg_console_tufed.ini`, `plg_console_tufed.sys.ini`, `plg_system_tufed.ini`,
