@@ -24,7 +24,20 @@ foreach (isset($o['version']) ? [$o['version']] : versions() as $version) {
     $state = loadState($version);
     $langs = isset($o['lang']) ? [$o['lang']] : versionLanguages($version);
     foreach (sourceFiles($version) as $rel) {
-        if (parseIni(sourcePath($version, $rel)) === null) $err("$version/source/en-GB/$rel does not parse");
+        $where = "$version/source/en-GB/$rel";
+        if (parseIni(sourcePath($version, $rel)) === null) $err("$where does not parse");
+        // English source: duplicate keys (Joomla silently keeps the last value) and
+        // keys out of byte order (strcmp), the order the file headers promise
+        $keys = [];
+        foreach (preg_split('/\r\n|\n/', file_get_contents(sourcePath($version, $rel))) as $n => $line) {
+            if (preg_match('/^([A-Z0-9_.\-]+)\s*=/', $line, $m)) $keys[] = [$m[1], $n + 1];
+        }
+        $seen = [];
+        foreach ($keys as $i => [$k, $line]) {
+            if (isset($seen[$k])) $err("$where:$line: duplicate key $k (first on line {$seen[$k]})");
+            $seen[$k] ??= $line;
+            if ($i && strcmp($keys[$i - 1][0], $k) > 0) $warn("$where:$line: $k is not in alphabetical order (after {$keys[$i - 1][0]})");
+        }
     }
     foreach ($langs as $lang) {
         $warnFix = 0; $warnOld = 0;

@@ -52,7 +52,7 @@ and become "reviewed" as native speakers check them.
 | Path | Content |
 |---|---|
 | `v0/` | One folder per TUF_ED version line (`v0` = all 0.x releases) |
-| `<version>/source/en-GB/admin/` | English master texts of com_tuf_ed, plg_system_tufed, lib_com_tuf, pkg_tuf_ed |
+| `<version>/source/en-GB/admin/` | English master texts of com_tuf_ed, plg_console_tufed, plg_system_tufed, plg_task_tufed, lib_com_tuf, pkg_tuf_ed |
 | `<version>/translations/<tag>/` | One folder per language |
 | `i18n/languages.json` | Languages, package versions, review-required strings |
 | `i18n/state/` | Translation status per string (maintained by the tools) |
