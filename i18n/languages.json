@@ -13,7 +13,16 @@
                 "_WARN(ING)?(_|$)",
                 "_CONFIRM_INTRO$"
             ],
-            "languages": []
+            "languages": [
+                "de-DE",
+                "el-GR",
+                "es-ES",
+                "fr-FR",
+                "it-IT",
+                "nl-NL",
+                "pl-PL",
+                "pt-BR"
+            ]
         }
     },
     "names": {
@@ -28,6 +37,10 @@
         "de-DE": {
             "english": "German",
             "native": "Deutsch"
+        },
+        "el-GR": {
+            "english": "Greek",
+            "native": "Ελληνικά"
         },
         "es-ES": {
             "english": "Spanish",
@@ -56,6 +69,14 @@
         "nl-NL": {
             "english": "Dutch",
             "native": "Nederlands"
+        },
+        "pl-PL": {
+            "english": "Polish",
+            "native": "Polski"
+        },
+        "pt-BR": {
+            "english": "Portuguese (Brazil)",
+            "native": "Português (Brasil)"
         },
         "sv-SE": {
             "english": "Swedish",
