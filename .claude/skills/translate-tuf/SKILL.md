@@ -60,7 +60,8 @@ Work in batches; do not load an entire language at once. Keep `work/` out of com
 1. Copy the `en-GB` files of all TUF_ED extensions into `<version>/source/en-GB/admin/`
    (plugin, library and package language files are installed in the administrator
    language folder too), using unprefixed names: `com_tuf_ed.ini`, `com_tuf_ed.sys.ini`,
-   `plg_system_tufed.ini`, `plg_system_tufed.sys.ini`, `lib_com_tuf.sys.ini`,
+   `plg_console_tufed.ini`, `plg_console_tufed.sys.ini`, `plg_system_tufed.ini`,
+   `plg_system_tufed.sys.ini`, `plg_task_tufed.ini`, `plg_task_tufed.sys.ini`, `lib_com_tuf.sys.ini`,
    `pkg_tuf_ed.sys.ini`. Only if the component has frontend strings, they go to `site/`.
    Convert line endings to LF.
 2. `php tools/sync.php --version=<version>`. New keys appear with English text, removed

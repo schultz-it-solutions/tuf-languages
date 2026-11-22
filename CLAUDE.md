@@ -1,6 +1,6 @@
 # tuf-languages
 
-Translations of TUF_ED (com_tuf_ed with plg_system_tufed, lib_com_tuf and pkg_tuf_ed),
+Translations of TUF_ED (com_tuf_ed with plg_console_tufed, plg_system_tufed, plg_task_tufed, lib_com_tuf and pkg_tuf_ed),
 shipped inside pkg_tuf_ed (`tools/build.php` produces a `language/` folder and the
 `<languages>` block for the package manifest). Later also TUF_IN.
 

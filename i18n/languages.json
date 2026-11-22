@@ -3,9 +3,16 @@
         "v0": {
             "product": "TUF_ED",
             "slug": "tuf_ed",
-            "component": "TUF_ED 0.x (com_tuf_ed, plg_system_tufed, lib_com_tuf, pkg_tuf_ed)",
+            "component": "TUF_ED 0.x (com_tuf_ed, plg_console_tufed, plg_system_tufed, plg_task_tufed, lib_com_tuf, pkg_tuf_ed)",
             "packageVersion": "0.1.0.1",
-            "reviewRequired": [],
+            "reviewRequired": [
+                "^COM_TUF_ED_KMS_",
+                "^COM_TUF_ED_KEYS_EMERGENCY_",
+                "^COM_TUF_ED_GUARD_",
+                "^COM_TUF_ED_INTEGRITY_(CONFIRM|ERR)_",
+                "_WARN(ING)?(_|$)",
+                "_CONFIRM_INTRO$"
+            ],
             "languages": []
         }
     },
