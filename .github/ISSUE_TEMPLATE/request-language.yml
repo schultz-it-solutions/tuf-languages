@@ -1,0 +1,21 @@
+name: Request a language
+description: Ask for a new TUF_ED language pack
+labels: ["new language"]
+body:
+  - type: input
+    id: language
+    attributes:
+      label: Language and Joomla language tag
+      placeholder: Polish, pl-PL
+    validations:
+      required: true
+  - type: dropdown
+    id: review
+    attributes:
+      label: Can you review the translation?
+      description: New languages start machine-translated; a native speaker's review makes them "reviewed"
+      options:
+        - Yes, I am a native speaker and can review it
+        - No, I only need the language
+    validations:
+      required: true
