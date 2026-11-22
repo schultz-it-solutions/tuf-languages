@@ -3,6 +3,7 @@
         "v0": {
             "product": "TUF_ED",
             "slug": "tuf_ed",
+            "sourcePattern": "^(com_tuf_ed|lib_com_tuf|pkg_tuf_ed|plg_[a-z]+_tufed)(\\.sys)?\\.ini$",
             "component": "TUF_ED 0.x (com_tuf_ed, plg_console_tufed, plg_system_tufed, plg_task_tufed, lib_com_tuf, pkg_tuf_ed)",
             "packageVersion": "0.1.0.1",
             "reviewRequired": [
